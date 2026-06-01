@@ -1,0 +1,137 @@
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(400px, 0.92fr);
+  background: #ffffff;
+  color: #213f7d;
+}
+
+.login-page__visual {
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 2.75rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background: #fefefe;
+}
+
+.login-page__visual-logo {
+  width: min(14rem, 32vw);
+//   align-self: stretch;
+  margin-bottom: 4.75rem;
+}
+
+.login-page__illustration {
+  width: 100%;
+  max-width: 34rem;
+  align-self: center;
+  object-fit: contain;
+}
+
+.login-page__panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem clamp(1.5rem, 3vw, 3rem);
+  background: #ffffff;
+  box-shadow: -1.5rem 0 3rem rgba(33, 63, 125, 0.03);
+}
+
+.login-page__panel-inner {
+  width: min(100%, 28rem);
+}
+
+.login-page__panel-inner h1 {
+  margin: 0;
+  color: #213f7d;
+  font-size: clamp(2rem, 3vw, 2.45rem);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+.login-page__panel-inner p {
+  margin: 0.8rem 0 3.1rem;
+  color: rgba(33, 63, 125, 0.62);
+  line-height: 1.55;
+}
+
+.login-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.login-form__link {
+  justify-self: start;
+  border: 0;
+  background: transparent;
+  color: #39cdcc;
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0;
+  cursor: pointer;
+}
+
+.login-form .app-button {
+  min-height: 50px;
+  width: 100%;
+}
+
+@media (max-width: 1100px) {
+  .login-page__visual {
+    padding: 2.5rem 1.75rem 3rem;
+  }
+
+  .login-page__visual-logo {
+    width: min(11.5rem, 28vw);
+    margin-bottom: 3.25rem;
+  }
+
+  .login-page__panel {
+    padding: 2rem 1.75rem;
+  }
+
+  .login-page__panel-inner {
+    width: min(100%, 25rem);
+  }
+}
+
+@media (max-width: 767px) {
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .login-page__visual {
+    min-height: 18rem;
+    padding: 1.5rem 1.25rem 1rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .login-page__visual-logo {
+    width: min(9.5rem, 44vw);
+    margin-bottom: 1.5rem;
+  }
+
+  .login-page__illustration {
+    max-width: 24rem;
+  }
+
+  .login-page__panel {
+    box-shadow: none;
+    padding: 0 1.25rem 2.5rem;
+  }
+
+  .login-page__panel-inner {
+    width: min(100%, 24rem);
+    text-align: left;
+  }
+
+  .login-page__panel-inner p {
+    margin-bottom: 2.2rem;
+  }
+}

@@ -1,0 +1,36 @@
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.75rem;
+  min-width: 6.75rem;
+  height: 2rem;
+  padding: 0 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  white-space: nowrap;
+  text-align: center;
+  box-sizing: border-box;
+
+  &--active {
+    color: #39cd62;
+    background: rgba(57, 205, 98, 0.12);
+  }
+
+  &--inactive {
+    color: #657191;
+    background: rgba(101, 113, 145, 0.12);
+  }
+
+  &--pending {
+    color: #e9b200;
+    background: rgba(233, 178, 0, 0.14);
+  }
+
+  &--blacklisted {
+    color: #e4033b;
+    background: rgba(228, 3, 59, 0.12);
+  }
+}

@@ -1,0 +1,242 @@
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  min-height: 4.5rem;
+  flex-wrap: nowrap;
+  position: sticky;
+  top: 0;
+  margin-bottom: 1rem;
+  min-height: 4rem;
+  border-radius: 0;
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 0 1px 0 rgba(33, 63, 125, 0.02);
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  &__menu-button {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid rgba(84, 95, 125, 0.16);
+    border-radius: 999px;
+    background: #ffffff;
+    color: #213f7d;
+    box-shadow: 0 10px 24px rgba(33, 63, 125, 0.06);
+    cursor: pointer;
+
+    svg {
+      width: 1.1rem;
+      height: 1.1rem;
+    }
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 1.75rem;
+    color: #213f7d;
+  }
+
+  p {
+    margin: 0.3rem 0 0;
+    color: #545f7d;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1 1 auto;
+    min-width: 0;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+  }
+
+  &__search {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    flex: 1 1 420px;
+    min-width: 260px;
+    max-width: 520px;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid rgba(33, 63, 125, 0.2);
+    background: #ffffff;
+
+    input {
+      width: 100%;
+      min-height: 48px;
+      border: 0;
+      padding: 0 1rem;
+      font: inherit;
+      background: #ffffff;
+      color: #213f7d;
+      box-sizing: border-box;
+      border-radius: 8px 0 0 8px;
+
+      &:focus {
+        outline: none;
+        outline: none;
+      }
+    }
+  }
+
+  &__search-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.25rem;
+    min-height: 48px;
+    border: 0;
+    border-radius: 0 8px 8px 0;
+    background: #39cdcc;
+    color: #ffffff;
+    cursor: pointer;
+
+    svg {
+      width: 0.95rem;
+      height: 0.95rem;
+      stroke-width: 2.4;
+    }
+  }
+
+  &__docs {
+    color: #213f7d;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 0.15rem;
+    flex: 0 0 auto;
+  }
+
+  &__icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    flex: 0 0 auto;
+
+    img {
+      width: 1.25rem;
+      height: 1.25rem;
+      display: block;
+    }
+  }
+
+  &__profile {
+    position: relative;
+    flex: 0 0 auto;
+  }
+
+  &__profile-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font: inherit;
+    color: #213f7d;
+    cursor: pointer;
+
+    .topbar__profile-avatar {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 999px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .topbar__profile-caret {
+      width: 0.7rem;
+      height: 0.7rem;
+      display: block;
+    }
+  }
+
+  &__profile-name {
+    font-weight: 500;
+  }
+
+  &__profile-menu {
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    right: 0;
+    z-index: 5;
+    min-width: 130px;
+    padding: 0.35rem 0;
+    border-radius: 8px;
+    background: #ffffff;
+    border: 1px solid rgba(84, 95, 125, 0.14);
+    box-shadow: 0 18px 30px rgba(33, 63, 125, 0.12);
+
+    button {
+      width: 100%;
+      padding: 0.7rem 1rem;
+      border: 0;
+      background: transparent;
+      color: #213f7d;
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+
+      &:hover {
+        background: rgba(57, 205, 204, 0.08);
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .topbar {
+    margin-bottom: 0.65rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 0.3rem 0.85rem 0.45rem;
+    box-shadow: none;
+
+    &__left {
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+    }
+
+    &__menu-button {
+      display: inline-flex;
+      flex: 0 0 auto;
+    }
+
+    &__search {
+      flex: 1 1 100%;
+      min-width: 0;
+      max-width: none;
+    }
+
+    &__actions {
+      margin-bottom: 0.85rem;
+      justify-content: flex-end;
+      gap: 0.9rem;
+      padding: 0.55rem 0.85rem;
+    }
+
+    &__docs {
+      margin-left: auto;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.app-button {
+  border: 0;
+  border-radius: 10px;
+  padding: 0.9rem 1.35rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #39cdcc;
+    outline-offset: 2px;
+  }
+}
+
+.app-button--primary {
+  background: #39cdcc;
+  color: #ffffff;
+  box-shadow: 0 14px 30px rgba(57, 205, 204, 0.28);
+
+  &:hover:not(:disabled) {
+    background: #2fb5b4;
+    transform: translateY(-1px);
+  }
+}
+
+.app-button--secondary {
+  background: rgba(57, 205, 204, 0.12);
+  color: #39cdcc;
+}
+
+.app-button--ghost {
+  background: transparent;
+  color: #545f7d;
+}
+
+.app-button--danger {
+  background: #fff2f2;
+  color: #e4033b;
+}

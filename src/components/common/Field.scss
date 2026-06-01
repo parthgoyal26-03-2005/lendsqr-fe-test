@@ -1,0 +1,35 @@
+.app-field {
+  display: grid;
+  gap: 0.35rem;
+
+  &__label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #545f7d;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  &__control {
+    width: 100%;
+    min-height: 48px;
+    border-radius: 8px;
+    border: 1px solid rgba(84, 95, 125, 0.2);
+    background: #ffffff;
+    color: #213f7d;
+    padding: 0.85rem 1rem;
+    font: inherit;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+      border-color: #39cdcc;
+      box-shadow: 0 0 0 3px rgba(57, 205, 204, 0.12);
+    }
+  }
+
+  &__error {
+    font-size: 0.75rem;
+    color: #e4033b;
+  }
+}
